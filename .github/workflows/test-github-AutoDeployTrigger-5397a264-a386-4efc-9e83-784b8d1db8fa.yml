@@ -57,3 +57,4 @@ jobs:
             az extension add --source https://workerappscliextension.blob.core.windows.net/azure-cli-extension/containerapp-0.2.0-py2.py3-none-any.whl --yes
             echo "Starting Deploying"
             az containerapp update -n test-github -g antchu-container-apps -i antchuacr201907.azurecr.io/test-github:${{ github.sha }} --registry-login-server antchuacr201907.azurecr.io --registry-username  ${{ secrets.REGISTRY_USERNAME }} --registry-password ${{ secrets.REGISTRY_PASSWORD }} --debug
+            
